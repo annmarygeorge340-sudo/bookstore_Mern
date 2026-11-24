@@ -11,7 +11,7 @@ import AdminResource from './Admin/Pages/AdminResource'
 import AdminSettings from './Admin/Pages/AdminSettings'
 import { useState } from 'react'
 import PreLoader from './components/PreLoader'
-
+import PageNotFound from './Pages/PageNotFound'
 function App() {
   const [isLoading,setLoading] = useState(true)
   setTimeout(()=>{
@@ -32,6 +32,7 @@ setLoading(false)
       <Route path='/admin' element={<AdminDashboard/>} />
       <Route path='/admin/resource' element={<AdminResource/>} />
       <Route path='/admin/settings' element={<AdminSettings/>} />
+        <Route path='/*' element={<PageNotFound/>} />
     </Routes>
     </>
   )
